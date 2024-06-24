@@ -1,30 +1,31 @@
 [English](README.md) | [簡体中文](README_CN.md)
 
-# Intentions
+##  目標
 
-1. Deomostrate how to kick start OrchardCore CMS version 1.8.3. Solve the problem if you get block when follow the offical guide. 
-2. This is a manual way start with ASP Core empty project in Visual Studio 2022. 
-3. Start debug mode in local development enviroment.
+1. 演示如何启动 OrchardCore CMS 1.8.3 版本。解决按照官方指南操作时遇到的问题。
+2. 本文采用在 Visual Studio 2022 中使用 ASP.NET Core 空项目手动启动的方式。
+3. 在本地开发环境中启动调试模式。
 
 
-# Get Started
-Open Visual Studio Create a new project, select 【ASP.NET Core Empty】
+##  入门
+
+在 Visual Studio 中创建一个新项目，选择“ASP.NET Core 空项目”。
 ![alt text](Assets/CreateProj.png)
 
-### Project Name: cms.web1 
+### 项目名称: cms.web1 
 
-### Next, keep uncheck “Do not use top-level statements”
+### 接下来，取消勾选“不使用顶级语句”。
 ![alt text](Assets/image.png)
 
-### After created, the solution folder structure like this 
+### 创建完成后，解决方案文件夹结构如下：
 ![alt text](Assets/image-1.png)
- 
 
-### Nuget search and install `OrchardCore.Application.Cms.Core.Targets`�and�`OrchardCore.Application.Cms.Targets`
+
+### 使用 Nuget 搜索并安装 `OrchardCore.Application.Cms.Core.Targets` 和 `OrchardCore.Application.Cms.Targets`。
 ![alt text](<Assets/Untitled (2).png>)
 
 
-### Open the program.cs file, overwrite its content with follow 
+### 打开 `program.cs` 文件，用以下内容覆盖其内容：
 ```
 using OrchardCore.Logging;
 var builder = WebApplication.CreateBuilder(args);
@@ -47,7 +48,8 @@ app.Run();
 ```
 
 
-## Error
+##  错误
+
 ![alt text](<Assets/Untitled (3).png>)
 
 ```bash
@@ -59,10 +61,10 @@ Error	CS1061	'ConfigureHostBuilder' does not contain a definition for 'UseNLogHo
 
 ```
 
-### To fix above issue, Nuget install `OrchardCore.Logging.NLog`  
- 
+### 为解决上述问题，使用 Nuget 安装 `OrchardCore.Logging.NLog`。
 
-### Add NLog.config to Project Root 
+
+### 将 `NLog.config` 添加到项目根目录
 ![alt text](<Assets/Untitled (4).png>)
 
 ```bash 
@@ -100,31 +102,32 @@ Error	CS1061	'ConfigureHostBuilder' does not contain a definition for 'UseNLogHo
 </nlog>
 ```
 
-### Start debug mode by Visual Studio, choose “IIS Express” then toggle play button.
+### 使用 Visual Studio 启动调试模式，选择“IIS Express”，然后切换播放按钮。
 ![alt text](<Assets/Untitled (5).png>)
 
-If show up this Setup screen, the Orchardcore CMS is lanuch successfully. 
+如果出现此设置屏幕，则 Orchardcore CMS 启动成功。
 
-(Alternatively) start debug mode with **Docker**, your system is required Docker-desktop installed.
+（或者）使用 **Docker** 启动调试模式，您的系统需要安装 Docker-desktop。
 
 
-# Setup a blog called web1
-This demo chooses Recipe as "Blog" and database as Sqlite. 
+##  设置名为 web1 的博客
+
+此演示选择“博客”作为配方，选择 Sqlite 作为数据库。
 ![alt Setup Orchardcore](<Assets/Untitled (6).png>) 
 
 
-## set up done.
+##  设置完成。
 ![alt text](<Assets/Untitled (7).png>)
 
 
 
-# Edit your blog and site content through admin-site
+##  通过管理站点编辑博客和网站内容
 
-Visit https://localhost:44365/admin  (Your port may not same, follow the visual studio one)
+访问 https://localhost:44365/admin （您的端口可能不同，请参考 Visual Studio 中的端口）
 
 
-## This repo is target to deom how to kick start a Orchardcore CMS.   
+##  本仓库旨在演示如何启动 Orchardcore CMS。
 
-# Reference 
+##  参考资料
 
-[Orchardcore offical getting started](https://docs.orchardcore.net/en/latest/getting-started/templates/)
+[Orchardcore 官方入门指南](https://docs.orchardcore.net/en/latest/getting-started/templates/)
