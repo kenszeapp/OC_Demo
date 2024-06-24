@@ -1,6 +1,6 @@
 # Intentions
 
-1. Deomostrate how to start up OrchardCore CMS version 1.8.3. Solve the problem if you get block when follow the offical guide. 
+1. Deomostrate how to kick start OrchardCore CMS version 1.8.3. Solve the problem if you get block when follow the offical guide. 
 2. This is a manual way start with ASP Core empty project in Visual Studio 2022. 
 3. Start debug mode in local development enviroment.
 
@@ -116,6 +116,13 @@ This demo chooses Recipe as "Blog" and database as Sqlite.
 
 
 
-# Admin site
+# Edit your blog and site content through admin-site
 
 Visit https://localhost:44365/admin  (Your port may not same, follow the visual studio one)
+
+
+## This repo is target to deom how to kick start a Orchardcore CMS.   
+
+# Reference 
+
+[Orchardcore offical getting started](https://docs.orchardcore.net/en/latest/getting-started/templates/)
